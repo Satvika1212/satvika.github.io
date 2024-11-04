@@ -32,4 +32,38 @@ input[type=text][disabled] {
     font-size: 0.9em;
     color: #666;
 }
-@media
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+        box-shadow: 1px 1px 8px #ccc;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    input[type=number],
+    input[type=text],
+    select {
+        padding: 10px;
+        margin: 8px 0;
+        font-size: 1em;
+    }
+
+    input[type=range] {
+        width: 100%;
+    }
+
+    #conversionRates {
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
