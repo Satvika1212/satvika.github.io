@@ -1,32 +1,42 @@
 /* Flexbox Part 1 */
 
 #flex-section1 ul {
-
+	display: flex;                
+  	justify-content: center; 
+	gap : 50px;
+  	padding: 0;                  
+  	margin: 0;                    
+  	list-style-type: none; 
+	box-sizing: border-box;
 }
-
 /* end Flexbox Part 1 */
 
 
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between; 
+	padding: 0;                  
+  	margin: 0; 
 }
 
 #flex-section2 li {
-
+	flex-grow: 1; 
+	width: 800px;
 }
 
 #flex-section2 .item1 {
-
+	order : 1;
 }
 
 #flex-section2 .item2 {
-
+	order : 3;
 }
 
 #flex-section2 .item3 {
-
+	order : 2;
 }
 
 /* end Flexbox Part 2 */
@@ -34,12 +44,19 @@
 
 /* Flexbox Part 3 */
 
-#flex-section3 .box {
-
+#flex-section3 .box {             
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 }
 
 #flex-section3 .tags ul {
-
+	display: flex;
+	list-style-type: none;
+	flex-wrap: wrap;
+	padding: 0px;
+	margin: 0px;
 }
 
 /* end Flexbox Part 3 */
@@ -48,7 +65,11 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-
+	display: inline-grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 20px;
+	height: 220px;
+	width: 690px;
 }
 
 /* end Grid Part 1 */
@@ -56,12 +77,18 @@
 
 /* Grid Part 2 */
 
-#grid-section2 .gridboxblue {
+#grid-section2 .gridboxblue {	
+	display: grid;
+	/* grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
+	grid-area: 1 / 2 / span 3 / span 3;
+	z-index: 2;
 
 }
 
 #grid-section2 .gridboxred {
-
+	display: grid;
+	grid-area: 2 / 1 / span 1 / span 2;
+	z-index: 1;
 }
 
 /* end Grid Part 2 */
@@ -70,23 +97,30 @@
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-
+	display: grid;
+	gap: 10px;
+	
 }
 
 #grid-section3 .box1 {
-
+	/* grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
+	grid-area: 1 / 1 / span 1 / span 3;
+	height: 100px;
 }
 
 #grid-section3 .box2 {
-
+	grid-area: 2 / 1 / span 1 / span 2;
+	height: 300px;
 }
 
 #grid-section3 .box3 {
-
+	grid-area: 2 / 3 / span 1 / span 1;
+	height: 300px;
 }
 
 #grid-section3 .box4 {
-
+	grid-area: 3 / 1 / span 1 / span 3;
+	height: 100px;
 }
 
 /* end Grid Part 3 */
@@ -100,15 +134,13 @@
 	color: #000;
 	padding: 20px;
 	text-decoration: none;
-
-
+	transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }
 
 #transition-section .box a:hover {
 	background-color: #cc0000;
 	color: #fff;
-
-
+	transition: background-color 3s ease-out, color 3s ease-out;
 }
 
 /* end Transition Part */
