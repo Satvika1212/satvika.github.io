@@ -11,7 +11,7 @@
         <h1>Tip Calculator</h1>
         <form id="tipForm">
             <label for="bill">Bill Total ($):</label>
-            <input type="number" id="bill" placeholder="Enter bill total">
+            <input type="text" id="bill" placeholder="Enter bill total">
 
             <label for="tipPctSlider">Tip Percentage:</label>
             <input type="range" id="tipPctSlider" min="0" max="100" value="15">
@@ -20,13 +20,6 @@
             <label for="currencyMenu">Choose Currency:</label>
             <select id="currencyMenu">
                 <option value="USD" data-rate="1">US Dollar ($)</option>
-                <option value="EUR" data-rate="1.16">Euro (€)</option>
-                <option value="GBP" data-rate="1.38">British Pound (£)</option>
-                <option value="CAD" data-rate="0.80">Canadian Dollar (C$)</option>
-                <option value="AUD" data-rate="0.75">Australian Dollar (A$)</option>
-                <option value="CHF" data-rate="1.10">Swiss Franc (CHF)</option>
-                <option value="CNY" data-rate="7.10">Chinese Yuan (¥)</option>
-                <option value="BRL" data-rate="5.25">Brazilian Real (R$)</option>
                 <option value="INR" data-rate="84.07">Indian Rupee (₹)</option>
                 <option value="JPY" data-rate="149.34">Japanese Yen (¥)</option>
             </select>
