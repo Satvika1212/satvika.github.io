@@ -3,16 +3,17 @@ document.getElementById('bill').addEventListener('input', updateCalc);
 document.getElementById('currencyMenu').addEventListener('change', updateCalc);
 
 function updateCalc() {
-    let bill = parseFloat(document.getElementById('bill').value);
+    let bill = document.getElementById('bill').value;
     let tipPct = parseInt(document.getElementById('tipPctSlider').value);
     let currencyMenu = document.getElementById('currencyMenu');
     let rate = parseFloat(currencyMenu.options[currencyMenu.selectedIndex].dataset.rate);
     let currencySym = currencyMenu.options[currencyMenu.selectedIndex].text.match(/\((.*)\)/)[1];
 
-    if (!isNaN(bill) && bill >= 0) {
+    if (!isNaN(bill) || bill >= 0) {
         let tipAmt = bill * (tipPct / 100);
         let total = bill + tipAmt;
 
+        bill = parseFloat(bill);
         // Convert to selected currency
         tipAmt *= rate;
         total *= rate;
